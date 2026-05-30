@@ -68,7 +68,7 @@ const letterAnimation = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.03, duration: 0.6, ease: [0.33, 1, 0.68, 1] }
+    transition: { delay: i * 0.03, duration: 0.6, ease: [0.33, 1, 0.68, 1] as const }
   })
 };
 

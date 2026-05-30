@@ -5,7 +5,7 @@ import PageTransition from '../components/PageTransition';
 import { GradientHeading } from '../components/GradientHeading';
 
 export default function Team() {
-  const [activeTab, setActiveTab] = useState('farook');
+  const [activeTab, setActiveTab] = useState<'farook' | 'pallavi'>('farook');
   const heroRef = useRef(null);
   const visionRef = useRef(null);
   const isVisionInView = useInView(visionRef, { once: true, margin: '-100px' });
@@ -199,7 +199,7 @@ export default function Team() {
                     <div className="mb-8">
                       <h4 className="font-bold text-foreground mb-4 uppercase tracking-wider text-sm">Core Expertise</h4>
                       <div className="flex flex-wrap gap-2">
-                        {currentFounder.expertise.map((tag, i) => (
+                        {currentFounder.expertise.map((tag: string, i: number) => (
                           <span key={i} className={`px-3 py-1 rounded-full text-sm font-bold ${
                             activeTab === 'farook' 
                               ? 'bg-blue-100 text-blue-700' 
@@ -212,7 +212,7 @@ export default function Team() {
                     </div>
 
                     <div className="grid grid-cols-3 gap-4 mb-8">
-                      {currentFounder.stats.map((stat, idx) => (
+                      {currentFounder.stats.map((stat: any, idx: number) => (
                         <div key={idx} className="text-center p-3 rounded-xl bg-gray-50">
                           <div className={`text-xl font-bold ${
                             activeTab === 'farook' ? 'text-blue-600' : 'text-rose-600'
@@ -253,7 +253,7 @@ export default function Team() {
                     <h3 className="text-2xl font-serif font-bold mb-6">Recent Updates</h3>
                     
                     <div className="space-y-4">
-                      {currentFounder.latestNews.map((news, idx) => (
+                      {currentFounder.latestNews.map((news: any, idx: number) => (
                         <motion.div
                           key={idx}
                           initial={{ opacity: 0, x: -20 }}
