@@ -74,7 +74,7 @@ export default function Team() {
             />
           </motion.div>
 
-          <div className="relative z-20 container mx-auto px-4 md:px-6 py-20">
+          <div className="relative z-20 container mx-auto px-5 sm:px-6 py-20">
             <motion.div style={{ opacity }} className="max-w-4xl">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -120,27 +120,27 @@ export default function Team() {
         </section>
 
         {/* ── FOUNDER SHOWCASE ── */}
-        <section className="py-24 bg-white">
-          <div className="container mx-auto px-4 md:px-6">
+        <section className="py-24 bg-white dark:bg-background">
+          <div className="container mx-auto px-5 sm:px-6">
             {/* Founder Tabs - Premium Style */}
             <div className="flex justify-center mb-16">
-              <div className="inline-flex bg-gray-100 rounded-full p-1">
+              <div className="inline-flex bg-gray-100 dark:bg-muted rounded-full p-1 max-w-full overflow-x-auto">
                 <button
                   onClick={() => setActiveTab('farook')}
-                  className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 ${
+                  className={`px-4 xs:px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-xs xs:text-sm sm:text-base transition-all duration-300 ${
                     activeTab === 'farook'
                       ? 'bg-blue-600 text-white shadow-lg'
-                      : 'text-gray-600 hover:text-gray-900'
+                      : 'text-gray-600 dark:text-muted-foreground hover:text-gray-900 dark:hover:text-foreground'
                   }`}
                 >
                   Farook Nurubhasha
                 </button>
                 <button
                   onClick={() => setActiveTab('pallavi')}
-                  className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 ${
+                  className={`px-4 xs:px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-xs xs:text-sm sm:text-base transition-all duration-300 ${
                     activeTab === 'pallavi'
                       ? 'bg-rose-600 text-white shadow-lg'
-                      : 'text-gray-600 hover:text-gray-900'
+                      : 'text-gray-600 dark:text-muted-foreground hover:text-gray-900 dark:hover:text-foreground'
                   }`}
                 >
                   Pallavi Nelli
@@ -159,12 +159,12 @@ export default function Team() {
               >
                 {/* Left Column - Profile Card */}
                 <div className={`relative rounded-3xl overflow-hidden shadow-2xl ${
-                  activeTab === 'farook' ? 'bg-gradient-to-br from-blue-50 to-white' : 'bg-gradient-to-br from-rose-50 to-white'
+                  activeTab === 'farook' ? 'bg-gradient-to-br from-blue-50 to-white dark:from-blue-950/20 dark:to-card' : 'bg-gradient-to-br from-rose-50 to-white dark:from-rose-950/20 dark:to-card'
                 }`}>
-                  <div className="p-8 md:p-10">
+                  <div className="p-5 xs:p-6 sm:p-8 md:p-10">
                     <div className="flex items-center gap-6 mb-8">
                       <div className={`w-28 h-28 rounded-full flex items-center justify-center border-4 shadow-xl ${
-                        activeTab === 'farook' ? 'border-blue-500/30 bg-blue-100' : 'border-rose-500/30 bg-rose-100'
+                        activeTab === 'farook' ? 'border-blue-500/30 bg-blue-100 dark:bg-blue-950/40' : 'border-rose-500/30 bg-rose-100 dark:bg-rose-950/40'
                       }`}>
                         <span className={`text-4xl font-serif font-bold ${
                           activeTab === 'farook' ? 'text-blue-600' : 'text-rose-600'
@@ -202,8 +202,8 @@ export default function Team() {
                         {currentFounder.expertise.map((tag: string, i: number) => (
                           <span key={i} className={`px-3 py-1 rounded-full text-sm font-bold ${
                             activeTab === 'farook' 
-                              ? 'bg-blue-100 text-blue-700' 
-                              : 'bg-rose-100 text-rose-700'
+                              ? 'bg-blue-100 text-blue-700 dark:bg-blue-950/40 dark:text-blue-400' 
+                              : 'bg-rose-100 text-rose-700 dark:bg-rose-950/40 dark:text-rose-400'
                           }`}>
                             {tag}
                           </span>
@@ -213,7 +213,7 @@ export default function Team() {
 
                     <div className="grid grid-cols-3 gap-4 mb-8">
                       {currentFounder.stats.map((stat: any, idx: number) => (
-                        <div key={idx} className="text-center p-3 rounded-xl bg-gray-50">
+                        <div key={idx} className="text-center p-3 rounded-xl bg-gray-50 dark:bg-muted/50">
                           <div className={`text-xl font-bold ${
                             activeTab === 'farook' ? 'text-blue-600' : 'text-rose-600'
                           }`}>
@@ -246,7 +246,7 @@ export default function Team() {
                 {/* Right Column - Latest News & Insights */}
                 <div className="space-y-8">
                   <div>
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 mb-4">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 dark:bg-muted mb-4">
                       <Newspaper className="w-4 h-4" />
                       <span className="text-xs font-bold tracking-wider uppercase">Latest News & Insights</span>
                     </div>
@@ -259,12 +259,12 @@ export default function Team() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: idx * 0.1 }}
-                          className="group p-5 rounded-xl border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all cursor-pointer"
+                          className="group p-5 rounded-xl border border-gray-100 dark:border-border hover:border-gray-200 dark:hover:border-border/80 hover:shadow-md transition-all cursor-pointer"
                         >
                           <div className="flex items-center justify-between mb-2">
                             <span className="text-xs font-medium text-muted-foreground">{news.date}</span>
                             <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${
-                              activeTab === 'farook' ? 'bg-blue-100 text-blue-700' : 'bg-rose-100 text-rose-700'
+                              activeTab === 'farook' ? 'bg-blue-100 text-blue-700 dark:bg-blue-950/40 dark:text-blue-400' : 'bg-rose-100 text-rose-700 dark:bg-rose-950/40 dark:text-rose-400'
                             }`}>
                               {news.source}
                             </span>
@@ -280,12 +280,12 @@ export default function Team() {
 
                   {/* Vision & Mission Cards */}
                   <div className="grid grid-cols-2 gap-4 pt-4">
-                    <div className="p-5 rounded-xl bg-gradient-to-br from-indigo-50 to-white border border-indigo-100">
+                    <div className="p-5 rounded-xl bg-gradient-to-br from-indigo-50 to-white dark:from-indigo-950/20 dark:to-card border border-indigo-100 dark:border-indigo-900/30">
                       <Target className="w-8 h-8 text-indigo-600 mb-3" />
                       <h4 className="font-bold mb-2">Vision</h4>
                       <p className="text-sm text-muted-foreground">Build India's most trusted ecosystem for ethical commerce and technology.</p>
                     </div>
-                    <div className="p-5 rounded-xl bg-gradient-to-br from-emerald-50 to-white border border-emerald-100">
+                    <div className="p-5 rounded-xl bg-gradient-to-br from-emerald-50 to-white dark:from-emerald-950/20 dark:to-card border border-emerald-100 dark:border-emerald-900/30">
                       <Heart className="w-8 h-8 text-emerald-600 mb-3" />
                       <h4 className="font-bold mb-2">Mission</h4>
                       <p className="text-sm text-muted-foreground">Empower farmers, preserve heritage, and deliver purity through technology.</p>
@@ -419,8 +419,8 @@ export default function Team() {
         </section>
 
         {/* ── THE ARSHITH WAY ── */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4 md:px-6">
+        <section className="py-20 bg-white dark:bg-background">
+          <div className="container mx-auto px-5 sm:px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
@@ -438,7 +438,7 @@ export default function Team() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="px-8 py-4 rounded-full bg-gradient-to-r from-gray-50 to-gray-100 border border-gray-200 shadow-sm text-lg font-semibold text-foreground hover:shadow-md transition-all cursor-pointer"
+                  className="px-8 py-4 rounded-full bg-gradient-to-r from-gray-50 to-gray-100 dark:from-muted dark:to-card border border-gray-200 dark:border-border shadow-sm text-lg font-semibold text-foreground hover:shadow-md transition-all cursor-pointer"
                 >
                   {principle}
                 </motion.div>
@@ -448,8 +448,8 @@ export default function Team() {
         </section>
 
         {/* ── LEADERSHIP PILLARS ── */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4 md:px-6">
+        <section className="py-20 bg-gray-50 dark:bg-card">
+          <div className="container mx-auto px-5 sm:px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Three Leadership Pillars</h2>
               <p className="text-muted-foreground">The foundational principles that drive our leadership approach</p>
@@ -482,7 +482,7 @@ export default function Team() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="group p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all hover:-translate-y-1"
+                  className="group p-5 xs:p-6 sm:p-8 bg-white dark:bg-background rounded-2xl shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100 dark:border-border/30"
                 >
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${pillar.color} flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform`}>
                     {pillar.icon}
@@ -497,7 +497,7 @@ export default function Team() {
 
         {/* ── PREMIUM CTA ── */}
         <section className="py-24 bg-primary">
-          <div className="container mx-auto px-4 md:px-6 text-center">
+          <div className="container mx-auto px-5 sm:px-6 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

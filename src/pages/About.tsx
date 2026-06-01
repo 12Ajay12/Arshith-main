@@ -155,7 +155,7 @@ export default function About() {
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             />
           </motion.div>
-          <div className="relative z-20 container mx-auto px-4 text-center mt-16">
+          <div className="relative z-20 container mx-auto px-5 sm:px-6 text-center mt-16">
             <motion.p 
               initial={{ opacity: 0, y: 20 }} 
               animate={{ opacity: 1, y: 0 }} 
@@ -203,7 +203,7 @@ export default function About() {
           <div className="absolute top-20 -left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
           <div className="absolute bottom-20 -right-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-1000" />
           
-          <div className="container mx-auto px-4 md:px-6 max-w-4xl relative z-10">
+          <div className="container mx-auto px-5 sm:px-6 max-w-4xl relative z-10">
             <Reveal>
               <p className="text-xs font-bold tracking-[0.3em] uppercase text-primary mb-6 text-center">How It Began</p>
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-16">The Genesis</h2>
@@ -235,7 +235,7 @@ export default function About() {
             animate={{ x: ['-100%', '100%'] }}
             transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
           />
-          <div className="container mx-auto px-4 text-center max-w-3xl relative z-10">
+          <div className="container mx-auto px-5 sm:px-6 text-center max-w-3xl relative z-10">
             <Reveal>
               <motion.h2 
                 className="text-3xl md:text-4xl font-serif font-bold mb-6"
@@ -256,7 +256,7 @@ export default function About() {
 
         {/* ── CORE VALUES WITH MAGNETIC HOVER EFFECTS ── */}
         <section className="py-32 bg-background">
-          <div className="container mx-auto px-4 md:px-6">
+          <div className="container mx-auto px-5 sm:px-6">
             <Reveal className="text-center mb-20">
               <p className="text-xs font-bold tracking-[0.3em] uppercase text-primary mb-4">What We Stand For</p>
               <h2 className="text-4xl md:text-5xl font-serif font-bold">Core Values</h2>
@@ -300,7 +300,7 @@ export default function About() {
         <section className="py-32 bg-muted border-y border-border relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
           
-          <div className="container mx-auto px-4 max-w-4xl relative z-10">
+          <div className="container mx-auto px-5 sm:px-6 max-w-4xl relative z-10">
             <Reveal className="text-center mb-20">
               <p className="text-xs font-bold tracking-[0.3em] uppercase text-primary mb-4">Our Journey</p>
               <h2 className="text-4xl md:text-5xl font-serif font-bold">Milestones</h2>
@@ -332,7 +332,7 @@ export default function About() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className={`relative flex items-center gap-8 pb-12 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} flex-row z-10 group`}
+                  className={`relative flex items-center gap-4 md:gap-8 pb-12 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} flex-row z-10 group`}
                 >
                   <div className={`hidden md:block w-1/2 ${i % 2 === 0 ? 'text-right pr-10' : 'text-left pl-10'}`}>
                     <motion.div 
@@ -343,7 +343,7 @@ export default function About() {
                     </motion.div>
                   </div>
                   <motion.div 
-                    className="z-20 w-8 h-8 rounded-full bg-primary border-4 border-background shadow-lg shrink-0 md:mx-0 ml-[1.75rem] group-hover:scale-125 transition-transform duration-300"
+                    className="z-20 w-8 h-8 rounded-full bg-primary border-4 border-background shadow-lg shrink-0 md:mx-0 ml-[2.5rem] group-hover:scale-125 transition-transform duration-300"
                     whileHover={{ scale: 1.3 }}
                   />
                   <div className={`flex-1 md:w-1/2 ${i % 2 === 0 ? 'md:pl-10 pl-0' : 'md:pr-10 pl-0'}`}>
@@ -363,7 +363,7 @@ export default function About() {
 
         {/* ── CORPORATE INFO WITH STAGGER REVEAL ── */}
         <section className="py-32 bg-background">
-          <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <div className="container mx-auto px-5 sm:px-6 max-w-4xl">
             <Reveal className="text-center mb-16">
               <h2 className="text-4xl font-serif font-bold">Corporate Information</h2>
             </Reveal>

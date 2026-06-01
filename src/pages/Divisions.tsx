@@ -157,7 +157,7 @@ export default function Divisions() {
             />
           </motion.div>
 
-          <div className="relative z-20 container mx-auto px-4 md:px-6 py-20">
+          <div className="relative z-20 container mx-auto px-5 sm:px-6 py-20">
             <div className="max-w-3xl">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -203,8 +203,8 @@ export default function Divisions() {
         </section>
 
         {/* ── PREMIUM DIVISION CAROUSEL / SHOWCASE ── */}
-        <section className="py-24 bg-white">
-          <div className="container mx-auto px-4 md:px-6">
+        <section className="py-24 bg-white dark:bg-background">
+          <div className="container mx-auto px-5 sm:px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
@@ -223,10 +223,10 @@ export default function Divisions() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.08, duration: 0.6 }}
-                  className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer"
+                  className="group relative bg-white dark:bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer border border-gray-100 dark:border-border/30"
                 >
                   {/* Image Background */}
-                  <div className="relative h-56 overflow-hidden">
+                  <div className="relative h-48 xs:h-56 overflow-hidden">
                     <div 
                       className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                       style={{ backgroundImage: `url('${div.image}')` }}
@@ -247,13 +247,13 @@ export default function Divisions() {
                   </div>
                   
                   <div className="p-6">
-                    <div className="flex items-center justify-between mb-3">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
                       <span className={`text-xs font-bold px-2 py-1 rounded-full ${
                         div.status === 'Active & Operational' 
-                          ? 'bg-emerald-100 text-emerald-700' 
+                          ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400' 
                           : div.status === 'Building' 
-                          ? 'bg-blue-100 text-blue-700'
-                          : 'bg-gray-100 text-gray-600'
+                          ? 'bg-blue-100 text-blue-700 dark:bg-blue-950/40 dark:text-blue-400'
+                          : 'bg-gray-100 text-gray-600 dark:bg-muted dark:text-muted-foreground'
                       }`}>
                         {div.status}
                       </span>
@@ -290,7 +290,7 @@ export default function Divisions() {
 
         {/* ── STATISTICS SECTION ── */}
         <section className="py-20 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
-          <div className="container mx-auto px-4 md:px-6">
+          <div className="container mx-auto px-5 sm:px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
                 <div className="text-4xl font-bold text-emerald-400 mb-2">6</div>
@@ -313,8 +313,8 @@ export default function Divisions() {
         </section>
 
         {/* ── INTERCONNECTED ECOSYSTEM ── */}
-        <section className="py-24 bg-gray-50">
-          <div className="container mx-auto px-4 md:px-6 text-center max-w-4xl">
+        <section className="py-24 bg-gray-50 dark:bg-card">
+          <div className="container mx-auto px-5 sm:px-6 text-center max-w-4xl">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -340,7 +340,7 @@ export default function Divisions() {
 
         {/* ── PREMIUM CTA ── */}
         <section className="py-24 bg-primary">
-          <div className="container mx-auto px-4 md:px-6 text-center">
+          <div className="container mx-auto px-5 sm:px-6 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

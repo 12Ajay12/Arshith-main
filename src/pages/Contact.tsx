@@ -34,7 +34,7 @@ export default function Contact() {
   return (
     <PageTransition>
       <div className="pt-32 pb-32 bg-background min-h-screen">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-5 sm:px-6">
           {/* HERO */}
           <div className="text-center max-w-4xl mx-auto mb-20">
             <motion.h1 
@@ -71,7 +71,7 @@ export default function Contact() {
                 key={type.id} 
                 variants={itemVariants}
                 onClick={() => setInquiryType(type.id)}
-                className={`cursor-pointer rounded-[2rem] p-10 border transition-all ${inquiryType === type.id ? 'bg-primary/5 border-primary shadow-lg' : 'bg-card border-border hover:border-primary/50 hover:shadow-md'}`}
+                className={`cursor-pointer rounded-[2rem] p-5 xs:p-6 sm:p-10 border transition-all ${inquiryType === type.id ? 'bg-primary/5 border-primary shadow-lg' : 'bg-card border-border hover:border-primary/50 hover:shadow-md'}`}
               >
                 <type.icon className={`w-12 h-12 mb-6 ${inquiryType === type.id ? 'text-primary' : 'text-muted-foreground'}`} />
                 <h3 className="text-2xl font-bold font-serif mb-4 text-foreground">{type.title}</h3>
@@ -130,7 +130,7 @@ export default function Contact() {
 
             {/* RIGHT COLUMN: FORM */}
             <div className="lg:col-span-8">
-              <div className="bg-card border border-border rounded-[3rem] p-10 md:p-16 shadow-xl">
+              <div className="bg-card border border-border rounded-[3rem] p-6 xs:p-8 md:p-16 shadow-xl">
                 <div className="mb-10 flex items-center gap-4">
                   <span className="px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-bold uppercase tracking-wider">
                     {inquiryType === 'general' ? 'General Inquiry' : inquiryType === 'farmer' ? 'Farmer Partnership' : 'B2B Inquiry'}
@@ -204,7 +204,7 @@ export default function Contact() {
           </div>
 
           {/* SOCIAL PROOF STRIP */}
-          <div className="bg-foreground text-background rounded-full py-8 px-8 border border-border/10">
+          <div className="bg-[#0e1713] dark:bg-[#050807] text-white/80 rounded-[2rem] sm:rounded-full py-8 px-8 border border-white/10">
             <div className="flex flex-wrap justify-center gap-8 md:gap-24 text-center">
               <span className="text-2xl md:text-3xl font-serif font-bold text-white">100+ Products</span>
               <span className="text-xl md:text-3xl font-serif font-bold text-primary">⭐ 5.0/5 Rating</span>

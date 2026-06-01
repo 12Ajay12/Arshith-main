@@ -154,13 +154,13 @@ function Card({ job, i }: { job: typeof openings[0]; i: number }) {
           <job.icon className="w-5 h-5 text-white" />
         </div>
       </div>
-      <div className="p-6">
+      <div className="p-5 xs:p-6">
         <div className="flex items-start justify-between gap-3 mb-3">
           <div>
             <h3 className="text-lg font-serif font-bold mb-0.5">{job.role}</h3>
             <p className="text-xs font-bold text-primary tracking-widest uppercase">{job.division}</p>
           </div>
-          <span className={`text-xs font-bold px-2 py-1 rounded-full shrink-0 ${job.type.includes('Internship') ? 'bg-amber-100 text-amber-700' : 'bg-primary/10 text-primary'}`}>
+          <span className={`text-xs font-bold px-2 py-1 rounded-full shrink-0 ${job.type.includes('Internship') ? 'bg-amber-100 text-amber-700 dark:bg-amber-950/40 dark:text-amber-400' : 'bg-primary/10 text-primary'}`}>
             {job.type}
           </span>
         </div>
@@ -195,7 +195,7 @@ export default function Careers() {
   return (
     <PageTransition>
       <div className="pt-32 pb-32 bg-background min-h-screen">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-5 sm:px-6">
 
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -264,7 +264,7 @@ export default function Careers() {
                   </p>
 
                   {/* Stats */}
-                  <div className="flex gap-6 mb-8">
+                  <div className="flex flex-wrap gap-x-6 gap-y-4 mb-8">
                     <div>
                       <div className="text-2xl font-bold text-emerald-400">10+</div>
                       <div className="text-xs text-white/60 uppercase tracking-wider">Open Positions</div>
@@ -280,7 +280,7 @@ export default function Careers() {
                   </div>
 
                   {/* Contact Info Grid */}
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
                         <Mail className="w-4 h-4 text-emerald-400" />
@@ -324,21 +324,21 @@ export default function Careers() {
                 <div className="flex flex-col items-center justify-center">
                   <motion.div 
                     whileHover={{ scale: 1.05 }}
-                    className="bg-white rounded-3xl p-6 shadow-2xl text-center max-w-[260px] mx-auto"
+                    className="bg-white dark:bg-card rounded-3xl p-6 shadow-2xl text-center max-w-[260px] mx-auto border border-gray-100 dark:border-border/30"
                   >
-                    <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-3 rounded-2xl mb-4">
+                    <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-background dark:to-muted p-3 rounded-2xl mb-4">
                       <img 
                         src={qrCodeUrl} 
                         alt="QR Code to Apply" 
                         className="w-40 h-40 mx-auto"
                       />
                     </div>
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 mb-3">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/40 dark:text-emerald-400 mb-3">
                       <QrCode className="w-3 h-3 text-emerald-600" />
-                      <span className="text-[10px] font-bold text-emerald-700 uppercase tracking-wider">Scan to Apply</span>
+                      <span className="text-[10px] font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">Scan to Apply</span>
                     </div>
-                    <p className="font-bold text-gray-800 text-sm">SCAN TO REGISTER</p>
-                    <p className="text-xs text-gray-500 mt-1">Great Opportunities · Better Future</p>
+                    <p className="font-bold text-gray-800 dark:text-foreground text-sm">SCAN TO REGISTER</p>
+                    <p className="text-xs text-gray-500 dark:text-muted-foreground mt-1">Great Opportunities · Better Future</p>
                   </motion.div>
                 </div>
               </div>

@@ -12,9 +12,9 @@ const divisions = [
 
 export default function Footer() {
   return (
-    <footer className="bg-foreground text-background">
+    <footer className="bg-[#0e1713] dark:bg-[#050807] text-white/80 border-t border-border/10">
       <div className="container mx-auto px-4 md:px-6 pt-20 pb-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-background/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-white/10">
           <div className="lg:col-span-1">
             <div className="mb-6">
               <div className="font-serif text-2xl font-bold tracking-widest text-white uppercase">Arshith</div>

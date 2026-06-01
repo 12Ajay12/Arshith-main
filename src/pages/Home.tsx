@@ -266,7 +266,7 @@ export default function Home() {
           </div>
 
           <div className="relative z-20 h-full flex flex-col justify-center">
-            <div className="container mx-auto px-6 md:px-12 lg:px-16">
+            <div className="container mx-auto px-5 xs:px-6 md:px-12 lg:px-16">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeIndex}
@@ -283,7 +283,7 @@ export default function Home() {
                   </div>
 
                   {/* Main Title */}
-                  <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-5 leading-[1.1] tracking-tight drop-shadow-lg">
+                  <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-5 leading-[1.1] tracking-tight drop-shadow-lg">
                     {heroSlides[activeIndex].title}
                   </h1>
                   
@@ -298,7 +298,7 @@ export default function Home() {
                   </p>
 
                   {/* Stats */}
-                  <div className="flex gap-6 mb-10">
+                  <div className="flex flex-wrap gap-x-6 gap-y-4 mb-10">
                     {heroSlides[activeIndex].stats.map((stat, idx) => (
                       <div key={idx} className="border-l border-white/30 pl-4">
                         <div className={`text-xl md:text-2xl font-bold bg-gradient-to-r ${heroSlides[activeIndex].gradient} bg-clip-text text-transparent drop-shadow-sm`}>
@@ -310,7 +310,7 @@ export default function Home() {
                   </div>
 
                   {/* CTA Buttons */}
-                  <div className="flex gap-4">
+                  <div className="flex flex-wrap gap-4">
                     <Link href={heroSlides[activeIndex].href}>
                       <motion.span
                         whileHover={{ scale: 1.02 }}
@@ -336,7 +336,7 @@ export default function Home() {
           </div>
 
           {/* Navigation Arrows */}
-          <div className="absolute bottom-8 right-8 z-30 flex gap-2">
+          <div className="absolute bottom-8 right-4 sm:right-8 z-30 flex gap-2">
             <button onClick={prevSlide} className="w-10 h-10 rounded-full bg-white/15 backdrop-blur-sm border border-white/30 flex items-center justify-center hover:bg-white/30 transition-all group cursor-pointer">
               <ChevronLeft className="w-5 h-5 text-white group-hover:text-emerald-400 transition-colors" />
             </button>
@@ -346,7 +346,7 @@ export default function Home() {
           </div>
 
           {/* Slide Indicators */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-3">
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 hidden xs:flex gap-3">
             {heroSlides.map((_, idx) => (
               <button
                 key={idx}
@@ -373,7 +373,7 @@ export default function Home() {
 
           {/* Scroll Indicator */}
           <motion.div
-            className="absolute bottom-8 left-8 z-30 text-white/50 flex flex-col items-center gap-1 cursor-pointer"
+            className="absolute bottom-8 left-4 sm:left-8 z-30 text-white/50 hidden md:flex flex-col items-center gap-1 cursor-pointer"
             animate={{ y: [0, 6, 0] }}
             transition={{ repeat: Infinity, duration: 1.5 }}
             onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
@@ -398,7 +398,7 @@ export default function Home() {
 
         {/* ── STATS ────────────────────────────────── */}
         <section className="py-24 bg-background border-b border-border">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-5 sm:px-6">
             <Section>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
                 {stats.map((s, i) => (
@@ -415,8 +415,8 @@ export default function Home() {
         </section>
 
         {/* ── INFOSYS-STYLE THREE PILLARS SECTION ── */}
-        <section className="py-24 bg-gray-50">
-          <div className="container mx-auto px-4 md:px-6">
+        <section className="py-24 bg-gray-50 dark:bg-background">
+          <div className="container mx-auto px-5 sm:px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
@@ -441,10 +441,10 @@ export default function Home() {
                     scale: 1.02,
                     transition: { duration: 0.3, ease: "easeOut" }
                   }}
-                  className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer border border-gray-100"
+                  className="group relative bg-white dark:bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer border border-gray-100 dark:border-border/30"
                 >
                   {/* Image Container */}
-                  <div className="relative h-56 overflow-hidden">
+                  <div className="relative h-48 xs:h-56 overflow-hidden">
                     <div 
                       className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                       style={{ backgroundImage: `url('${pillar.bgImage}')` }}
@@ -456,7 +456,7 @@ export default function Home() {
                   </div>
                   
                   {/* Content */}
-                  <div className="p-6">
+                  <div className="p-5 xs:p-6">
                     <div className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-primary/10 text-primary mb-3">
                       {pillar.number} / Pillar
                     </div>
@@ -479,8 +479,8 @@ export default function Home() {
         </section>
 
         {/* ── ARSHITH INFOTECH FEATURE SECTION ── */}
-        <section className="py-24 bg-white">
-          <div className="container mx-auto px-4 md:px-6">
+        <section className="py-24 bg-white dark:bg-background">
+          <div className="container mx-auto px-5 sm:px-6">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -489,7 +489,7 @@ export default function Home() {
                 transition={{ duration: 0.6 }}
                 className="space-y-6"
               >
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800/30">
                   <Cpu className="w-4 h-4 text-blue-600" />
                   <span className="text-xs font-bold tracking-wider text-blue-700 uppercase">Arshith Groups</span>
                 </div>
@@ -544,8 +544,7 @@ export default function Home() {
                 <img 
                   src="https://www.larsentoubro.com/_next/image?url=https%3A%2F%2F2025prodstorageaccount-eqdyc8g8hpccdfez.a02.azurefd.net%2Fltprod%2Fmedia%2Fvr0lpwhh%2Fhomepage-sustainability.webp&w=2048&q=75"
                   alt="Arshith Infotech - Digital Transformation"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  style={{ minHeight: "400px" }}
+                  className="w-full h-64 sm:h-80 md:h-[400px] lg:h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   onError={(e) => {
                     e.currentTarget.src = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80";
                   }}
@@ -557,7 +556,7 @@ export default function Home() {
 
         {/* ── DIVISIONS GRID ───────────────────────── */}
         <section className="py-32 bg-muted/40">
-          <div className="container mx-auto px-4 md:px-6">
+          <div className="container mx-auto px-5 sm:px-6">
             <Section className="text-center max-w-2xl mx-auto mb-20">
               <p className="text-xs font-bold tracking-[0.3em] uppercase text-primary mb-4">What We Do</p>
               <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6">Six Divisions.<br />One Purpose.</h2>
@@ -573,7 +572,7 @@ export default function Home() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08, duration: 0.6 }}
                   whileHover={{ y: -4 }}
-                  className="group relative bg-card border border-border rounded-[2rem] p-8 overflow-hidden hover:shadow-xl transition-all duration-300"
+                  className="group relative bg-card border border-border rounded-2xl sm:rounded-[2rem] p-5 xs:p-6 sm:p-8 overflow-hidden hover:shadow-xl transition-all duration-300"
                 >
                   <div className={`absolute inset-0 bg-gradient-to-br ${div.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
                   <div className={`w-12 h-12 rounded-2xl ${div.accent} flex items-center justify-center mb-6`}>
@@ -595,7 +594,7 @@ export default function Home() {
 
         {/* ── GROUP STORY ──────────────────────────── */}
         <section className="py-32 bg-background">
-          <div className="container mx-auto px-4 md:px-6">
+          <div className="container mx-auto px-5 sm:px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
               <Section>
                 <p className="text-xs font-bold tracking-[0.3em] uppercase text-primary mb-6">Who We Are</p>
@@ -626,7 +625,7 @@ export default function Home() {
               </Section>
 
               <Section>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 xs:grid-cols-2 gap-4">
                   {[
                     { label: "Founded", value: "April 2025", sub: "Chirala, Andhra Pradesh" },
                     { label: "Registered", value: "MCA, India", sub: "CIN: U46300AP2025PTC119022" },
@@ -639,7 +638,7 @@ export default function Home() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.1 }}
-                      className="bg-muted rounded-[1.5rem] p-6"
+                      className="bg-muted rounded-[1.5rem] p-4 sm:p-6"
                     >
                       <div className="text-xs text-muted-foreground font-bold uppercase tracking-widest mb-2">{item.label}</div>
                       <div className="text-lg font-bold font-serif mb-1">{item.value}</div>
@@ -654,7 +653,7 @@ export default function Home() {
 
         {/* ── VISION & MISSION ─────────────────────── */}
         <section className="py-32 bg-background">
-          <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+          <div className="container mx-auto px-5 sm:px-6 max-w-5xl">
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
@@ -676,7 +675,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.15 }}
-                  className={`${item.bg} rounded-[2.5rem] p-10 md:p-12`}
+                  className={`${item.bg} rounded-3xl md:rounded-[2.5rem] p-6 xs:p-8 md:p-12`}
                 >
                   <p className={`text-xs font-bold tracking-[0.25em] uppercase mb-6 ${i === 0 ? 'text-white/60' : 'text-muted-foreground'}`}>{item.label}</p>
                   <h3 className={`text-2xl font-serif font-bold mb-5 leading-tight ${i === 0 ? 'text-white' : 'text-foreground'}`}>{item.title}</h3>
@@ -689,7 +688,7 @@ export default function Home() {
 
         {/* ── TEAM TEASER ──────────────────────────── */}
         <section className="py-24 bg-muted/40 border-t border-border">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container mx-auto px-5 sm:px-6 text-center">
             <Section>
               <p className="text-xs font-bold tracking-[0.3em] uppercase text-primary mb-4">Leadership</p>
               <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">Guided by Founders Who Care</h2>
@@ -707,7 +706,7 @@ export default function Home() {
 
         {/* ── CAREERS CTA ──────────────────────────── */}
         <section className="py-20 bg-primary">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container mx-auto px-5 sm:px-6 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
