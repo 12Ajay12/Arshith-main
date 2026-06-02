@@ -126,37 +126,50 @@ export default function ArshithInfotech() {
             ))}
           </div>
 
-          {/* COMMITMENT SECTION */}
-          <div className="bg-foreground text-background rounded-[3rem] p-12 md:p-24 overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/20 blur-[100px] -mr-48 -mt-48 rounded-full" />
+          {/* COMMITMENT SECTION - FIXED FOR DARK MODE */}
+          <div className="relative rounded-[3rem] p-12 md:p-24 overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800 shadow-2xl">
+            {/* Animated Background Elements */}
+            <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-[100px] -mr-48 -mt-48 animate-pulse" />
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-500/20 rounded-full blur-[100px] -ml-48 -mb-48 animate-pulse" style={{ animationDelay: '1s' }} />
+            
             <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-8">Ready to Scale?</h2>
-                <div className="space-y-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/30 mb-6">
+                  <Zap className="w-4 h-4 text-blue-400" />
+                  <span className="text-xs font-bold tracking-wider text-blue-300 uppercase">Ready to Scale?</span>
+                </div>
+                <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-8">
+                  Ready to Scale?
+                </h2>
+                <div className="space-y-5">
                   {[
                     "100% Cloud-Native Strategy",
                     "AI-Driven Process Automation",
                     "Data-Centric Performance Marketing",
                     "Round-the-clock Enterprise Support"
                   ].map((text) => (
-                    <div key={text} className="flex items-center gap-4 text-white/70">
-                      <CheckCircle className="w-6 h-6 text-blue-500" />
-                      <span className="text-lg font-medium">{text}</span>
+                    <div key={text} className="flex items-center gap-4">
+                      <div className="w-7 h-7 rounded-full bg-blue-500/20 flex items-center justify-center">
+                        <CheckCircle className="w-4 h-4 text-blue-400" />
+                      </div>
+                      <span className="text-white/80 text-lg font-medium">{text}</span>
                     </div>
                   ))}
                 </div>
               </div>
               <div className="text-center lg:text-right">
-                <p className="text-xl text-white/60 mb-10 leading-relaxed font-serif italic">
-                  "Digital innovation is embedded in our vision, culture, strategy, and business processes."
-                </p>
-                <motion.button 
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-10 py-5 bg-blue-600 text-white rounded-full text-lg font-bold shadow-xl shadow-blue-900/20"
-                >
-                  Request Strategy Consult
-                </motion.button>
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                  <p className="text-xl text-white/70 mb-6 leading-relaxed font-serif italic">
+                    "Digital innovation is embedded in our vision, culture, strategy, and business processes."
+                  </p>
+                  <motion.button 
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full text-lg font-bold shadow-xl shadow-blue-900/30 hover:shadow-2xl transition-all inline-flex items-center gap-2"
+                  >
+                    Request Strategy Consult <ArrowRight className="w-4 h-4" />
+                  </motion.button>
+                </div>
               </div>
             </div>
           </div>
