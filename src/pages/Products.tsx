@@ -78,7 +78,7 @@ export default function Products() {
           >
             {categories.map((cat) => (
               <motion.div key={cat.id} variants={itemVariants} className="perspective-1000">
-                <MagneticCard className={`h-full group relative rounded-[2.5rem] overflow-hidden bg-gradient-to-br ${cat.color} p-8 flex flex-col cursor-pointer shadow-lg hover:shadow-2xl transition-all border border-black/10`}>
+                <MagneticCard className={`h-full group relative rounded-2xl md:rounded-[2.5rem] overflow-hidden bg-gradient-to-br ${cat.color} p-5 sm:p-8 flex flex-col cursor-pointer shadow-lg hover:shadow-2xl transition-all border border-black/10`}>
                   
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-500" />
                   
@@ -117,7 +117,7 @@ export default function Products() {
           <div className="space-y-32 mb-40">
             {/* Spotlight 1 */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="rounded-[3rem] overflow-hidden bg-muted aspect-square">
+              <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="rounded-2xl md:rounded-[3rem] overflow-hidden bg-muted aspect-square">
                 <img src={gheeImg} alt="Pure Desi Ghee" className="w-full h-full object-cover" />
               </motion.div>
               <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -142,14 +142,14 @@ export default function Products() {
                 </p>
                 <button className="px-8 py-4 bg-primary text-primary-foreground rounded-full font-bold hover:scale-105 transition-transform">Buy Now</button>
               </motion.div>
-              <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="rounded-[3rem] overflow-hidden bg-muted aspect-square order-1 md:order-2">
+              <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="rounded-2xl md:rounded-[3rem] overflow-hidden bg-muted aspect-square order-1 md:order-2">
                 <img src={sesameOilImg} alt="Sesame Oil" className="w-full h-full object-cover" />
               </motion.div>
             </div>
 
             {/* Spotlight 3 */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="rounded-[3rem] overflow-hidden bg-muted aspect-square">
+              <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="rounded-2xl md:rounded-[3rem] overflow-hidden bg-muted aspect-square">
                 <img src={picklesImg} alt="Mango Pickle" className="w-full h-full object-cover" />
               </motion.div>
               <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -170,7 +170,7 @@ export default function Products() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={containerVariants}
-            className="rounded-[3rem] overflow-hidden bg-foreground text-background border border-border p-12 md:p-24"
+            className="rounded-2xl md:rounded-[3rem] overflow-hidden bg-foreground text-background border border-border p-6 sm:p-12 md:p-24"
           >
             <div className="text-center mb-16">
               <GradientHeading className="text-4xl md:text-6xl font-serif font-bold mb-6 text-white">Partner For Scale</GradientHeading>
@@ -178,7 +178,7 @@ export default function Products() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 mb-16">
-              <motion.div variants={itemVariants} className="bg-background/5 border border-white/10 p-8 rounded-[2rem]">
+              <motion.div variants={itemVariants} className="bg-background/5 border border-white/10 p-5 sm:p-8 rounded-2xl md:rounded-[2rem]">
                 <Truck className="w-10 h-10 text-primary mb-6" />
                 <h3 className="text-2xl font-bold font-serif mb-4 text-white">Wholesale Supply</h3>
                 <ul className="space-y-3 text-muted-foreground list-disc list-inside">
@@ -188,7 +188,7 @@ export default function Products() {
                   <li>Dedicated account manager</li>
                 </ul>
               </motion.div>
-              <motion.div variants={itemVariants} className="bg-background/5 border border-white/10 p-8 rounded-[2rem]">
+              <motion.div variants={itemVariants} className="bg-background/5 border border-white/10 p-5 sm:p-8 rounded-2xl md:rounded-[2rem]">
                 <Building2 className="w-10 h-10 text-primary mb-6" />
                 <h3 className="text-2xl font-bold font-serif mb-4 text-white">Restaurant Partnerships</h3>
                 <ul className="space-y-3 text-muted-foreground list-disc list-inside">
@@ -198,7 +198,7 @@ export default function Products() {
                   <li>Volume discounts</li>
                 </ul>
               </motion.div>
-              <motion.div variants={itemVariants} className="bg-background/5 border border-white/10 p-8 rounded-[2rem]">
+              <motion.div variants={itemVariants} className="bg-background/5 border border-white/10 p-5 sm:p-8 rounded-2xl md:rounded-[2rem]">
                 <Globe className="w-10 h-10 text-primary mb-6" />
                 <h3 className="text-2xl font-bold font-serif mb-4 text-white">Export Inquiry</h3>
                 <ul className="space-y-3 text-muted-foreground list-disc list-inside">

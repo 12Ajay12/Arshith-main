@@ -206,7 +206,7 @@ export default function ArshithFresh() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="bg-card border border-border rounded-[2rem] p-8"
+                  className="bg-card border border-border rounded-2xl md:rounded-[2rem] p-5 sm:p-8"
                 >
                   <div className="flex gap-1 text-yellow-400 mb-4">
                     {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-current" />)}
@@ -235,7 +235,7 @@ export default function ArshithFresh() {
                 { icon: Building2, title: "Restaurant Partnerships", points: ["Chef-grade ingredients", "Heritage spices & podulu", "Pure bilona ghee", "Cold-pressed oils"] },
                 { icon: Globe, title: "Export Inquiry", points: ["FSSAI compliant", "Preservative-free guarantee", "International standards", "Secure logistics"] },
               ].map((c, i) => (
-                <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="bg-white/5 border border-white/10 p-8 rounded-[2rem]">
+                <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="bg-white/5 border border-white/10 p-5 sm:p-8 rounded-2xl md:rounded-[2rem]">
                   <c.icon className="w-8 h-8 text-primary mb-5" />
                   <h3 className="text-xl font-serif font-bold text-white mb-4">{c.title}</h3>
                   <ul className="space-y-2">

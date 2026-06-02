@@ -229,7 +229,7 @@ export default function Careers() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="relative overflow-hidden rounded-[2.5rem] mb-24"
+            className="relative overflow-hidden rounded-2xl md:rounded-[2.5rem] mb-12 md:mb-24"
           >
             {/* Background Image */}
             <div className="absolute inset-0">
@@ -246,7 +246,7 @@ export default function Careers() {
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '1s' }} />
 
             {/* Content */}
-            <div className="relative z-10 p-8 md:p-12 lg:p-16">
+            <div className="relative z-10 p-5 sm:p-10 md:p-12 lg:p-16">
               <div className="grid lg:grid-cols-2 gap-10 items-center">
                 {/* Left Side - Text Content */}
                 <div className="text-white">
@@ -360,7 +360,7 @@ export default function Careers() {
               <h2 className="text-2xl md:text-3xl font-serif font-bold mb-2">Featured Positions</h2>
               <p className="text-muted-foreground">Current opportunities across our divisions</p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
               {["Web Developer", "Frontend Developer", "Mobile App Developer", ".NET & Azure Developer", "Social Media Manager & PR"].map((role, idx) => (
                 <motion.div
                   key={role}
@@ -377,7 +377,7 @@ export default function Careers() {
           </div>
 
           {/* Why Join - Premium Version */}
-          <div className="bg-gradient-to-br from-primary via-primary/90 to-primary/95 rounded-[3rem] p-10 md:p-16 mb-24 shadow-2xl">
+          <div className="bg-gradient-to-br from-primary via-primary/90 to-primary/95 rounded-2xl md:rounded-[3rem] p-6 sm:p-10 md:p-16 mb-12 md:mb-24 shadow-2xl">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 mb-4">
@@ -423,7 +423,7 @@ export default function Careers() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-muted to-muted/50 border border-border rounded-[3rem] p-12 md:p-16 text-center"
+            className="bg-gradient-to-br from-muted to-muted/50 border border-border rounded-2xl md:rounded-[3rem] p-6 sm:p-10 md:p-16 text-center"
           >
             <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
               <GraduationCap className="w-10 h-10 text-primary" />

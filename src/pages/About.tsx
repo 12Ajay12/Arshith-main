@@ -274,7 +274,7 @@ export default function About() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.08, duration: 0.6 }}
-                    className="bg-card border border-border rounded-[2rem] p-8 hover:shadow-xl transition-all cursor-pointer group"
+                    className="bg-card border border-border rounded-2xl md:rounded-[2rem] p-6 sm:p-8 hover:shadow-xl transition-all cursor-pointer group"
                     whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                   >
                     <motion.div 
@@ -369,7 +369,7 @@ export default function About() {
             </Reveal>
             <Reveal>
               <motion.div 
-                className="bg-card rounded-[3rem] border border-border p-10 md:p-16 shadow-lg"
+                className="bg-card rounded-2xl md:rounded-[3rem] border border-border p-6 sm:p-10 md:p-16 shadow-lg"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}

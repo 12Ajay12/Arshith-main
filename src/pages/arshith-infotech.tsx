@@ -73,7 +73,7 @@ export default function ArshithInfotech() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative rounded-[3rem] overflow-hidden aspect-[21/9] mb-32 shadow-2xl"
+            className="relative rounded-2xl md:rounded-[3rem] overflow-hidden aspect-[16/9] md:aspect-[21/9] mb-16 md:mb-32 shadow-2xl"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10" />
             <img 
@@ -81,14 +81,14 @@ export default function ArshithInfotech() {
               alt="Global Technology Infrastructure" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute bottom-12 left-12 z-20 text-white max-w-lg">
-              <h2 className="text-3xl font-serif font-bold mb-4">Enterprise-Grade Reliability</h2>
-              <p className="text-white/80 leading-relaxed">We assist corporations in transitioning to automated workflows and executing growth strategies in the web ecosystem.</p>
+            <div className="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-20 text-white max-w-lg">
+              <h2 className="text-2xl md:text-3xl font-serif font-bold mb-4">Enterprise-Grade Reliability</h2>
+              <p className="text-white/80 text-sm md:text-base leading-relaxed">We assist corporations in transitioning to automated workflows and executing growth strategies in the web ecosystem.</p>
             </div>
           </motion.div>
 
           {/* SERVICES GRID WITH IMAGES */}
-          <div className="grid md:grid-cols-2 gap-8 mb-32">
+          <div className="grid md:grid-cols-2 gap-8 mb-16 md:mb-32">
             {services.map((service, i) => (
               <motion.div
                 key={service.title}
@@ -98,7 +98,7 @@ export default function ArshithInfotech() {
                 transition={{ delay: i * 0.1 }}
               >
                 <MagneticCard className="h-full">
-                  <div className="bg-card border border-border rounded-[2.5rem] overflow-hidden h-full flex flex-col group hover:border-blue-500/50 transition-all duration-300">
+                  <div className="bg-card border border-border rounded-2xl md:rounded-[2.5rem] overflow-hidden h-full flex flex-col group hover:border-blue-500/50 transition-all duration-300">
                     {/* Image Container */}
                     <div className="relative h-56 overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10" />
@@ -113,7 +113,7 @@ export default function ArshithInfotech() {
                     </div>
                     
                     {/* Content */}
-                    <div className="p-8 flex flex-col flex-grow">
+                    <div className="p-6 md:p-8 flex flex-col flex-grow">
                       <h3 className="text-2xl font-serif font-bold mb-3">{service.title}</h3>
                       <p className="text-muted-foreground leading-relaxed flex-grow">{service.desc}</p>
                       <div className="mt-6 pt-6 border-t border-border flex items-center gap-2 text-blue-600 font-bold group-hover:gap-3 transition-all cursor-pointer">
@@ -126,37 +126,50 @@ export default function ArshithInfotech() {
             ))}
           </div>
 
-          {/* COMMITMENT SECTION */}
-          <div className="bg-foreground text-background rounded-[3rem] p-12 md:p-24 overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/20 blur-[100px] -mr-48 -mt-48 rounded-full" />
+          {/* COMMITMENT SECTION - FIXED FOR DARK MODE */}
+          <div className="relative rounded-2xl md:rounded-[3rem] p-6 sm:p-12 md:p-24 overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800 shadow-2xl">
+            {/* Animated Background Elements */}
+            <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-[100px] -mr-48 -mt-48 animate-pulse" />
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-500/20 rounded-full blur-[100px] -ml-48 -mb-48 animate-pulse" style={{ animationDelay: '1s' }} />
+            
             <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-8">Ready to Scale?</h2>
-                <div className="space-y-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/30 mb-6">
+                  <Zap className="w-4 h-4 text-blue-400" />
+                  <span className="text-xs font-bold tracking-wider text-blue-300 uppercase">Ready to Scale?</span>
+                </div>
+                <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-8">
+                  Ready to Scale?
+                </h2>
+                <div className="space-y-5">
                   {[
                     "100% Cloud-Native Strategy",
                     "AI-Driven Process Automation",
                     "Data-Centric Performance Marketing",
                     "Round-the-clock Enterprise Support"
                   ].map((text) => (
-                    <div key={text} className="flex items-center gap-4 text-white/70">
-                      <CheckCircle className="w-6 h-6 text-blue-500" />
-                      <span className="text-lg font-medium">{text}</span>
+                    <div key={text} className="flex items-center gap-4">
+                      <div className="w-7 h-7 rounded-full bg-blue-500/20 flex items-center justify-center">
+                        <CheckCircle className="w-4 h-4 text-blue-400" />
+                      </div>
+                      <span className="text-white/80 text-lg font-medium">{text}</span>
                     </div>
                   ))}
                 </div>
               </div>
               <div className="text-center lg:text-right">
-                <p className="text-xl text-white/60 mb-10 leading-relaxed font-serif italic">
-                  "Digital innovation is embedded in our vision, culture, strategy, and business processes."
-                </p>
-                <motion.button 
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-10 py-5 bg-blue-600 text-white rounded-full text-lg font-bold shadow-xl shadow-blue-900/20"
-                >
-                  Request Strategy Consult
-                </motion.button>
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                  <p className="text-xl text-white/70 mb-6 leading-relaxed font-serif italic">
+                    "Digital innovation is embedded in our vision, culture, strategy, and business processes."
+                  </p>
+                  <motion.button 
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full text-lg font-bold shadow-xl shadow-blue-900/30 hover:shadow-2xl transition-all inline-flex items-center gap-2"
+                  >
+                    Request Strategy Consult <ArrowRight className="w-4 h-4" />
+                  </motion.button>
+                </div>
               </div>
             </div>
           </div>

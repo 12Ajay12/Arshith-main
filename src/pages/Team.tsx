@@ -158,11 +158,11 @@ export default function Team() {
                 className="grid lg:grid-cols-2 gap-16 items-start"
               >
                 {/* Left Column - Profile Card */}
-                <div className={`relative rounded-3xl overflow-hidden shadow-2xl ${
+                <div className={`relative rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl ${
                   activeTab === 'farook' ? 'bg-gradient-to-br from-blue-50 to-white dark:from-blue-950/20 dark:to-card' : 'bg-gradient-to-br from-rose-50 to-white dark:from-rose-950/20 dark:to-card'
                 }`}>
-                  <div className="p-5 xs:p-6 sm:p-8 md:p-10">
-                    <div className="flex items-center gap-6 mb-8">
+                  <div className="p-5 sm:p-10">
+                    <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 mb-6 sm:mb-8 text-center sm:text-left">
                       <div className={`w-28 h-28 rounded-full flex items-center justify-center border-4 shadow-xl ${
                         activeTab === 'farook' ? 'border-blue-500/30 bg-blue-100 dark:bg-blue-950/40' : 'border-rose-500/30 bg-rose-100 dark:bg-rose-950/40'
                       }`}>
@@ -187,7 +187,7 @@ export default function Team() {
                       activeTab === 'farook' ? 'border-blue-500/50' : 'border-rose-500/50'
                     }`}>
                       <Quote className="w-8 h-8 text-muted-foreground/30 mb-2" />
-                      <p className="text-xl font-serif italic text-foreground leading-relaxed">
+                      <p className="text-lg sm:text-xl font-serif italic text-foreground leading-relaxed">
                         "{currentFounder.quote}"
                       </p>
                     </div>
@@ -390,7 +390,7 @@ export default function Team() {
               >
                 <div className="absolute -left-4 -top-4 text-6xl text-emerald-400/20 font-serif">"</div>
                 <div className="absolute -right-4 -bottom-4 text-6xl text-emerald-400/20 font-serif">"</div>
-                <p className="text-xl md:text-2xl lg:text-3xl font-light italic leading-relaxed max-w-4xl mx-auto px-8 py-4">
+                <p className="text-base sm:text-xl md:text-2xl lg:text-3xl font-light italic leading-relaxed max-w-4xl mx-auto px-4 sm:px-8 py-2 sm:py-4">
                   To build an ecosystem where technology enables clean commerce, where farmers earn fair prices, and where every Indian family can access the food their ancestors trusted.
                 </p>
               </motion.div>

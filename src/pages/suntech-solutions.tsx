@@ -61,12 +61,12 @@ export default function SuntechSolutions() {
           </div>
 
           {/* FEATURE IMAGE GRID */}
-          <div className="grid md:grid-cols-12 gap-6 mb-32">
+          <div className="grid md:grid-cols-12 gap-6 mb-16 md:mb-32">
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="md:col-span-8 rounded-[3rem] overflow-hidden aspect-video relative group shadow-xl"
+              className="md:col-span-8 rounded-2xl md:rounded-[3rem] overflow-hidden aspect-video relative group shadow-xl"
             >
               <img 
                 src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80" 
@@ -78,7 +78,7 @@ export default function SuntechSolutions() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="md:col-span-4 rounded-[3rem] bg-muted p-10 flex flex-col justify-center border border-border"
+              className="md:col-span-4 rounded-2xl md:rounded-[3rem] bg-muted p-6 sm:p-10 flex flex-col justify-center border border-border"
             >
               <div className="text-4xl font-serif font-bold text-primary mb-4">99.9%</div>
               <h4 className="text-xl font-bold mb-4">System Reliability</h4>
@@ -87,7 +87,7 @@ export default function SuntechSolutions() {
           </div>
 
           {/* CAPABILITIES GRID */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-32">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 md:mb-32">
             {capabilities.map((item, i) => (
               <motion.div
                 key={item.title}
@@ -96,7 +96,7 @@ export default function SuntechSolutions() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
               >
-                <div className="bg-card border border-border p-8 rounded-[2rem] h-full hover:shadow-xl transition-all border-b-4 border-b-transparent hover:border-b-purple-500">
+                <div className="bg-card border border-border p-6 sm:p-8 rounded-2xl md:rounded-[2rem] h-full hover:shadow-xl transition-all border-b-4 border-b-transparent hover:border-b-purple-500">
                   <item.icon className="w-10 h-10 text-primary mb-6" />
                   <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
@@ -110,7 +110,7 @@ export default function SuntechSolutions() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-primary text-primary-foreground rounded-[3.5rem] p-12 md:p-24 text-center relative overflow-hidden"
+            className="bg-primary text-primary-foreground rounded-2xl md:rounded-[3.5rem] p-6 sm:p-12 md:p-24 text-center relative overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-transparent" />
             <div className="relative z-10">

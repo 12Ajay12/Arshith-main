@@ -216,20 +216,20 @@ export default function Home() {
       setProgress(0);
       return;
     }
-    
+
     setProgress(0);
     const startTime = Date.now();
-    
+
     const updateProgress = () => {
       const elapsed = Date.now() - startTime;
       const newProgress = Math.min((elapsed / slideDuration) * 100, 100);
       setProgress(newProgress);
-      
+
       if (newProgress < 100) {
         requestAnimationFrame(updateProgress);
       }
     };
-    
+
     const frame = requestAnimationFrame(updateProgress);
     return () => cancelAnimationFrame(frame);
   }, [activeIndex, autoplay]);
@@ -246,18 +246,18 @@ export default function Home() {
                 key={slide.id}
                 className="absolute inset-0"
                 initial={{ opacity: 0 }}
-                animate={{ 
+                animate={{
                   opacity: idx === activeIndex ? 1 : 0,
                   scale: idx === activeIndex ? 1.1 : 1.05
                 }}
-                transition={{ 
+                transition={{
                   opacity: { duration: 0.8, ease: "easeInOut" },
                   scale: { duration: 5, ease: "linear" }
                 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/60 z-10" />
-                <img 
-                  src={slide.image} 
+                <img
+                  src={slide.image}
                   alt={slide.title}
                   className="w-full h-full object-cover"
                 />
@@ -286,12 +286,12 @@ export default function Home() {
                   <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-5 leading-[1.1] tracking-tight drop-shadow-lg">
                     {heroSlides[activeIndex].title}
                   </h1>
-                  
+
                   {/* Subtitle - BOLD & VISIBLE */}
                   <p className="text-lg md:text-xl font-bold text-white/90 mb-5 tracking-wide drop-shadow-md">
                     {heroSlides[activeIndex].subtitle}
                   </p>
-                  
+
                   {/* Description - BOLD & VISIBLE */}
                   <p className="text-white/85 text-base md:text-lg font-medium max-w-xl leading-relaxed mb-8 drop-shadow-sm">
                     {heroSlides[activeIndex].description}
@@ -354,9 +354,8 @@ export default function Home() {
                   setActiveIndex(idx);
                   setProgress(0);
                 }}
-                className={`h-0.5 rounded-full transition-all duration-500 cursor-pointer ${
-                  activeIndex === idx ? 'w-12 bg-white' : 'w-6 bg-white/40 hover:bg-white/60'
-                }`}
+                className={`h-0.5 rounded-full transition-all duration-500 cursor-pointer ${activeIndex === idx ? 'w-12 bg-white' : 'w-6 bg-white/40 hover:bg-white/60'
+                  }`}
               />
             ))}
           </div>
@@ -436,7 +435,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
-                  whileHover={{ 
+                  whileHover={{
                     y: -12,
                     scale: 1.02,
                     transition: { duration: 0.3, ease: "easeOut" }
@@ -445,7 +444,7 @@ export default function Home() {
                 >
                   {/* Image Container */}
                   <div className="relative h-48 xs:h-56 overflow-hidden">
-                    <div 
+                    <div
                       className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                       style={{ backgroundImage: `url('${pillar.bgImage}')` }}
                     />
@@ -454,7 +453,7 @@ export default function Home() {
                       <div className="text-4xl">{pillar.icon}</div>
                     </div>
                   </div>
-                  
+
                   {/* Content */}
                   <div className="p-5 xs:p-6">
                     <div className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-primary/10 text-primary mb-3">
@@ -464,7 +463,7 @@ export default function Home() {
                     <p className="text-sm font-medium text-muted-foreground mb-3">{pillar.tagline}</p>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-4">{pillar.desc}</p>
                     <Link href={pillar.href}>
-                      <motion.span 
+                      <motion.span
                         whileHover={{ x: 5 }}
                         className={`inline-flex items-center gap-2 text-sm font-bold bg-gradient-to-r ${pillar.gradient} bg-clip-text text-transparent hover:gap-3 transition-all cursor-pointer`}
                       >
@@ -493,20 +492,20 @@ export default function Home() {
                   <Cpu className="w-4 h-4 text-blue-600" />
                   <span className="text-xs font-bold tracking-wider text-blue-700 uppercase">Arshith Groups</span>
                 </div>
-                
+
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground leading-tight">
                   ENGINEERING A<br />
                   <span className="text-blue-600">DIGITAL FUTURE</span>
                 </h2>
-                
+
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   Raising the bar to the next level, Arshith Groups is undertaking ambitious goals related to Enterprise Digital Transformation and AI Integration. We aim to achieve 100% cloud-native operations by 2028, ahead of industry standards.
                 </p>
-                
+
                 <p className="text-muted-foreground text-base leading-relaxed">
                   Digital innovation is embedded in our vision, culture, strategy, and business processes. We are committed to technological growth, and integrate cutting-edge IT solutions, scalable cloud infrastructure, and AI-driven automation in all aspects of our enterprise delivery.
                 </p>
-                
+
                 <div className="flex flex-wrap gap-6 pt-4">
                   <div>
                     <div className="text-2xl font-bold text-blue-600">150+</div>
@@ -521,7 +520,7 @@ export default function Home() {
                     <div className="text-xs text-muted-foreground uppercase tracking-wider">Enterprise Support</div>
                   </div>
                 </div>
-                
+
                 <Link href="/arshith-infotech">
                   <motion.span
                     whileHover={{ scale: 1.02 }}
@@ -532,7 +531,7 @@ export default function Home() {
                   </motion.span>
                 </Link>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -541,7 +540,7 @@ export default function Home() {
                 className="relative rounded-2xl overflow-hidden shadow-2xl group"
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent z-10" />
-                <img 
+                <img
                   src="https://www.larsentoubro.com/_next/image?url=https%3A%2F%2F2025prodstorageaccount-eqdyc8g8hpccdfez.a02.azurefd.net%2Fltprod%2Fmedia%2Fvr0lpwhh%2Fhomepage-sustainability.webp&w=2048&q=75"
                   alt="Arshith Infotech - Digital Transformation"
                   className="w-full h-64 sm:h-80 md:h-[400px] lg:h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -572,7 +571,7 @@ export default function Home() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08, duration: 0.6 }}
                   whileHover={{ y: -4 }}
-                  className="group relative bg-card border border-border rounded-2xl sm:rounded-[2rem] p-5 xs:p-6 sm:p-8 overflow-hidden hover:shadow-xl transition-all duration-300"
+                  className="group relative bg-card border border-border rounded-2xl md:rounded-[2rem] p-5 sm:p-8 overflow-hidden hover:shadow-xl transition-all duration-300"
                 >
                   <div className={`absolute inset-0 bg-gradient-to-br ${div.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
                   <div className={`w-12 h-12 rounded-2xl ${div.accent} flex items-center justify-center mb-6`}>
@@ -638,7 +637,7 @@ export default function Home() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.1 }}
-                      className="bg-muted rounded-[1.5rem] p-4 sm:p-6"
+                      className="bg-muted rounded-xl sm:rounded-[1.5rem] p-4 sm:p-6"
                     >
                       <div className="text-xs text-muted-foreground font-bold uppercase tracking-widest mb-2">{item.label}</div>
                       <div className="text-lg font-bold font-serif mb-1">{item.value}</div>
@@ -675,7 +674,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.15 }}
-                  className={`${item.bg} rounded-3xl md:rounded-[2.5rem] p-6 xs:p-8 md:p-12`}
+                  className={`${item.bg} rounded-2xl md:rounded-[2.5rem] p-6 sm:p-12`}
                 >
                   <p className={`text-xs font-bold tracking-[0.25em] uppercase mb-6 ${i === 0 ? 'text-white/60' : 'text-muted-foreground'}`}>{item.label}</p>
                   <h3 className={`text-2xl font-serif font-bold mb-5 leading-tight ${i === 0 ? 'text-white' : 'text-foreground'}`}>{item.title}</h3>
