@@ -9,6 +9,7 @@ import heroBg from '../assets/images/hero-bg.png';
 import gheeImg from '../assets/images/ghee.png';
 import honeyImg from '../assets/images/honey.png';
 import spicesImg from '../assets/images/spices.png';
+import infotechImg from '../assets/images/infotech.jpg';
 
 const divisions = [
   {
@@ -134,7 +135,7 @@ const heroSlides = [
     title: "Arshith Infotech",
     subtitle: "IT Consulting & Digital Transformation",
     description: "Global IT consulting, enterprise automation, cloud transformation, and digital marketing solutions that help businesses scale in the digital ecosystem.",
-    image: "https://static.vecteezy.com/system/resources/thumbnails/002/883/759/small/illustration-of-world-and-network-photo.jpg",
+    image: infotechImg,
     stats: [
       { label: "Projects", value: "150+" },
       { label: "Satisfaction", value: "98%" },
