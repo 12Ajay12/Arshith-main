@@ -21,7 +21,7 @@ export default function Footer() {
               <div className="text-[10px] font-bold tracking-[0.35em] text-white/40 uppercase">Groups</div>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-8">
-              A diversified group building ecosystems across agriculture, technology, commerce, and beyond. Based in Andhra Pradesh, built for India.
+              A diversified group building ecosystems across agriculture, technology, commerce, and beyond. Based in Bangalore, built for India.
             </p>
             <div className="space-y-2">
               <a
@@ -87,9 +87,9 @@ export default function Footer() {
             <h4 className="text-xs font-bold tracking-[0.2em] uppercase text-white/40 mb-6">Corporate</h4>
             <address className="text-sm text-white/60 not-italic leading-relaxed space-y-1 mb-6">
               <div className="font-medium text-white/80">Arshith Fresh India Private Limited</div>
-              <div>D No 10/39, Naguluppalapadu Mandal</div>
-              <div>Timmasamudram, Prakasam</div>
-              <div>Chirala, Andhra Pradesh – 523185</div>
+              <div>#308, 3rd Floor, Brigade Tower</div>
+              <div>135, Brigade Road, Ashok Nagar</div>
+              <div>Bangalore, Karnataka – 560025</div>
             </address>
             <ul className="space-y-2 text-sm">
               <li>
